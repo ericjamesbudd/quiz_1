@@ -4,10 +4,16 @@ $baseFont: oblique 1em sans-serif;
 $leftMargin: 50px;
 $padding: 10px;
 
+// Mixin
+@mixin borders($weight, $color, $radius)
+{
+    border: $weight solid $color;
+    border-radius: $radius;
+}
+
 
 header {
-    border: 2px solid #064277;
-    border-radius: 20px;
+    @include borders(2px, #064277, 20px);
     margin: 10px auto;
     padding: $padding;
     background-color: $background;
@@ -27,16 +33,14 @@ h1 {
 }
 
 #content {
-    border: 2px solid #064277;
-    border-radius: 20px;
+    @include borders(2px, #064277, 20px);
     margin: 10px auto;
     padding: $padding;
     background-color: $background;
 }
 
 #list{
-    border: 2px solid #064277;
-    border-radius: 20px;
+    @include borders(2px, #064277, 20px);
     background-color: $background;
 }
 
@@ -64,18 +68,16 @@ p{
         color: #064277;
         text-align: center;
     }
-}
 
-.samplepara {
-    border: 3px solid #58a0e0;
-    border-radius: 5px;
-    padding: $padding;
-    background-color: white;
+    &.samplepara {
+        @include borders(3px, #58a0e0, 5px);
+        padding: $padding;
+        background-color: white;
+    }
 }
 
 footer {
-    border: 2px solid #064277;
-    border-radius: 20px;
+    @include borders(2px, #064277, 20px);
     margin: 10px auto;
     padding: $padding;
     background-color: $background;

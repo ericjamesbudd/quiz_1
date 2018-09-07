@@ -56,8 +56,7 @@ p#footer {
   color: #064277;
   text-align: center;
 }
-
-.samplepara {
+p.samplepara {
   border: 3px solid #58a0e0;
   border-radius: 5px;
   padding: 10px;
